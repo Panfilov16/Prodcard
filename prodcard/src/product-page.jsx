@@ -7,6 +7,7 @@ import Dilivery from './dilivery';
 import Description from './description';
 import FullPrice from './full-price';
 import Comments from './comments';
+import Popularity from "./popularity"
 
 function ProductPage({product}){
   
@@ -27,6 +28,7 @@ function ProductPage({product}){
               <Dilivery>{product.delivery}</Dilivery>
               </p>
               <button type='button'>Купить</button>
+              <Popularity count={product.comments.length}/>
             </div>
           </div>
           <Description>{product.description}</Description>
